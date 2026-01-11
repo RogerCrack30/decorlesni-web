@@ -2,16 +2,19 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #f7f1f1e5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #D4AF37;
+  --color-primary: #DB2777;
+  /* Rosa fuerte para buen contraste */
   --color-primary-foreground: #FFFFFF;
-  --color-secondary: #F5F5F5;
-  --color-dark-nav: #0F172A;
+  --color-secondary: #FFF5F7;
+  /* Un rosado muy pálido de fondo */
+  --color-dark-nav: #FFFFFF;
+  /* Blanco para que el logo se lea perfecto */
 
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
@@ -23,7 +26,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #d3b8b8;
     --foreground: #ededed;
   }
 }

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#002B36] text-white pt-16 pb-8 border-t border-white/10">
+        <footer className="bg-white text-gray-900 pt-16 pb-8 border-t border-gray-200">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* 1. Navegación Superior */}
@@ -30,10 +31,14 @@ export default function Footer() {
 
                     {/* Columna Izquierda: Logo y Redes */}
                     <div className="flex flex-col items-center md:items-end md:pr-12 border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0">
-                        <Link href="/" className="mb-6">
-                            <span className="text-3xl font-bold font-[family-name:var(--font-playfair)]">
-                                decorlesni
-                            </span>
+                        <Link href="/" className="mb-6 block">
+                            <Image
+                                src="/gallery/logo.png"
+                                alt="DecorLesni Logo"
+                                width={220}
+                                height={100}
+                                className="h-28 w-auto object-contain"
+                            />
                         </Link>
                         <div className="flex gap-4">
                             <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary hover:text-white transition-all">

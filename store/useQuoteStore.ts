@@ -14,8 +14,10 @@ interface QuoteState {
     theme: string | null;
     customTheme: string;
     cart: CartItem[];
+    eventDetails: Record<string, any>;
     setStep: (step: number) => void;
     setEventType: (type: EventType) => void;
+    setEventDetails: (details: Record<string, any>) => void;
     setTheme: (theme: string, customTheme?: string) => void;
     addItem: (product: Product) => void;
     removeItem: (productId: string) => void;
@@ -31,6 +33,7 @@ export const useQuoteStore = create<QuoteState>((set, get) => ({
     eventType: null,
     theme: null,
     customTheme: '',
+    eventDetails: {},
     cart: [],
 
     setStep: (step) => set({ step }),
@@ -38,6 +41,10 @@ export const useQuoteStore = create<QuoteState>((set, get) => ({
     setEventType: (type) => set((state) => ({
         eventType: type,
         step: state.step + 1
+    })),
+
+    setEventDetails: (details) => set((state) => ({
+        eventDetails: { ...state.eventDetails, ...details }
     })),
 
     setTheme: (theme, customTheme = '') => set({ theme, customTheme }),

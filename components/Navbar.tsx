@@ -1,33 +1,41 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 
 export default function Navbar() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-dark-nav shadow-lg">
+        <nav className="sticky top-0 z-50 w-full bg-white shadow-lg">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="text-2xl font-bold text-white font-[family-name:var(--font-playfair)] tracking-wide">
-                            decorlesni
+                        <Link href="/">
+                            <Image
+                                src="/gallery/logo.png"
+                                alt="DecorLesni Logo"
+                                width={180}
+                                height={80}
+                                className="h-20 w-auto object-contain"
+                                priority
+                            />
                         </Link>
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-8">
-                        <Link href="/" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                        <Link href="/" className="text-gray-700 hover:text-primary transition-colors text-sm font-bold tracking-wide">
                             INICIO
                         </Link>
-                        <Link href="/nosotros" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                        <Link href="/nosotros" className="text-gray-700 hover:text-primary transition-colors text-sm font-bold tracking-wide">
                             NOSOTROS
                         </Link>
-                        <Link href="/servicios" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                        <Link href="/servicios" className="text-gray-700 hover:text-primary transition-colors text-sm font-bold tracking-wide">
                             SERVICIOS
                         </Link>
-                        <Link href="/galeria" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                        <Link href="/galeria" className="text-gray-700 hover:text-primary transition-colors text-sm font-bold tracking-wide">
                             GALERÍAS
                         </Link>
-                        <Link href="/#cotizar" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                        <Link href="/#cotizar" className="text-gray-700 hover:text-primary transition-colors text-sm font-bold tracking-wide">
                             CONTACTO
                         </Link>
                     </div>

@@ -18,28 +18,31 @@ const eventImages = [
 
 export default function EventGallery() {
     return (
-        <section className="py-16 bg-[#002B36] overflow-hidden mt-20 border-t-4 border-primary">
+        <section className="py-16 bg-white overflow-hidden mt-20 border-t-4 border-primary">
             <div className="text-center mb-10 px-4">
                 {/* Logo Brand */}
-                <div className="mb-6 flex justify-center">
-                    <span className="text-4xl font-bold text-white font-[family-name:var(--font-playfair)] tracking-wide">
-                        decorlesni
-                    </span>
+                <div className="mb-8 flex justify-center">
+                    <Image
+                        src="/gallery/logo.png"
+                        alt="DecorLesni Logo"
+                        width={350}
+                        height={120}
+                        className="h-40 w-auto object-contain drop-shadow-2xl"
+                    />
                 </div>
 
                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary/90 mb-3">
                     NUESTRO TRABAJO
                 </p>
-                <h2 className="text-3xl md:text-4xl font-bold text-white font-[family-name:var(--font-playfair)]">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-[family-name:var(--font-playfair)]">
                     Sonrisas, colores y celebraciones hechas realidad
                 </h2>
             </div>
 
-            {/* Marquee Container */}
             <div className="relative flex w-full overflow-hidden">
-                {/* Degradados laterales para suavizar bordes */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#002B36] to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#002B36] to-transparent z-10 pointer-events-none" />
+                {/* Degradados laterales para suavizar bordes si*/}
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
                 <motion.div
                     className="flex gap-6 whitespace-nowrap"

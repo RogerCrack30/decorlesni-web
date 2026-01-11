@@ -3,12 +3,14 @@ export interface ThemeOption {
     label: string;
     desc?: string; // Opcional, solo para estilos elegantes
     gallery: string[];
+    keywords?: string[]; // Para búsqueda inteligente (ej: ["spiderman", "hulk"] -> Superhéroes)
 }
 
 export const kidThemes: ThemeOption[] = [
     {
         id: "mickey",
         label: "Mickey & Minnie",
+        keywords: ["mickey", "minnie", "disney", "raton"],
         gallery: [
             "https://images.unsplash.com/photo-1579294572237-64010373dfd7?q=80&w=1080&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1543881373-b26a19f2913e?q=80&w=1080&auto=format&fit=crop"
@@ -17,6 +19,7 @@ export const kidThemes: ThemeOption[] = [
     {
         id: "princesas",
         label: "Princesas",
+        keywords: ["princesa", "frozen", "elsa", "cenicienta", "ariel", "sirenita", "bella", "encanto"],
         gallery: [
             "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?q=80&w=1080&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?q=80&w=1080&auto=format&fit=crop"
@@ -25,6 +28,7 @@ export const kidThemes: ThemeOption[] = [
     {
         id: "superheros",
         label: "Superhéroes",
+        keywords: ["spiderman", "batman", "avengers", "marvel", "hulk", "capitan america", "ironman", "dc"],
         gallery: [
             "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=1080&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1560964175-99d949cf0622?q=80&w=1080&auto=format&fit=crop"
