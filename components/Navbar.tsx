@@ -8,12 +8,31 @@ export default function Navbar() {
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="text-2xl font-bold text-white font-[family-name:var(--font-playfair)]">
+                        <Link href="/" className="text-2xl font-bold text-white font-[family-name:var(--font-playfair)] tracking-wide">
                             decorlesni
                         </Link>
                     </div>
 
-                    {/* CTA Button (Centered/Right) */}
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex space-x-8">
+                        <Link href="/" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                            INICIO
+                        </Link>
+                        <Link href="/nosotros" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                            NOSOTROS
+                        </Link>
+                        <Link href="/servicios" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                            SERVICIOS
+                        </Link>
+                        <Link href="/galeria" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                            GALERÍAS
+                        </Link>
+                        <Link href="/#cotizar" className="text-white hover:text-primary transition-colors text-sm font-medium tracking-wide">
+                            CONTACTO
+                        </Link>
+                    </div>
+
+                    {/* CTA Button (Right) */}
                     <div>
                         <Link
                             href="#cotizar"

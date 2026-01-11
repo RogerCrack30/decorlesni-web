@@ -5,24 +5,34 @@ import { useQuoteStore } from "@/store/useQuoteStore";
 
 const events = [
     {
-        id: "boda",
-        label: "Boda & Matrimonio",
-        image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop",
+        id: "infantil",
+        label: "Fiesta Infantil",
+        description: "Cumpleaños, temáticas, personajes, globos",
+        image: "/gallery/cumple 4.jpg",
     },
     {
         id: "xv",
         label: "15 Años",
-        image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=800&auto=format&fit=crop",
+        description: "Decoración elegante y personalizada",
+        image: "/gallery/cumple 3.jpg",
     },
     {
-        id: "infantil",
-        label: "Fiesta Infantil",
-        image: "https://images.unsplash.com/photo-1530103862676-de3c9a59af57?q=80&w=800&auto=format&fit=crop",
+        id: "boda",
+        label: "Boda & Matrimonio",
+        description: "Ambientes románticos y sofisticados",
+        image: "/gallery/cumple 2.png",
     },
     {
         id: "corporativo",
         label: "Evento Corporativo",
-        image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop",
+        description: "Eventos empresariales y lanzamientos",
+        image: "/gallery/cumple 7.png",
+    },
+    {
+        id: "otros",
+        label: "Otros",
+        description: "Celebraciones especiales a tu medida",
+        image: "/gallery/cumple 8.jpg",
     },
 ] as const;
 
@@ -47,7 +57,7 @@ export default function EventSelector() {
     return (
         <div className="w-full">
             <h2 className="text-3xl font-bold text-center mb-8 font-[family-name:var(--font-playfair)] text-gray-800">
-                ¿Qué tipo de evento estás planeando?
+                Cuéntanos qué tipo de evento estás planeando
             </h2>
 
             <motion.div
@@ -74,10 +84,13 @@ export default function EventSelector() {
 
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 w-full p-6 text-left">
-                            <span className="block text-xl font-semibold text-white font-[family-name:var(--font-playfair)]">
+                            <span className="block text-xl font-semibold text-white font-[family-name:var(--font-playfair)] leading-tight">
                                 {event.label}
                             </span>
-                            <span className="mt-2 block text-sm text-gray-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <p className="mt-1 text-sm text-gray-200 line-clamp-2">
+                                {event.description}
+                            </p>
+                            <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wider text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                 Seleccionar →
                             </span>
                         </div>

@@ -6,31 +6,40 @@ import Image from "next/image";
 
 // Imágenes de ejemplo de eventos anteriores (Alta Calidad)
 const eventImages = [
-    "https://images.unsplash.com/photo-1519225421980-715cb0202128?q=80&w=600&auto=format&fit=crop", // Boda Mesa
-    "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600&auto=format&fit=crop", // Boda Exterior
-    "https://images.unsplash.com/photo-1530103862676-de3c9a59af57?q=80&w=600&auto=format&fit=crop", // Fiesta Privada
-    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop", // Boda Elegante
-    "https://images.unsplash.com/photo-1478146896981-b80c463b4372?q=80&w=600&auto=format&fit=crop", // Mesa Postres
-    "https://images.unsplash.com/photo-1507915977619-6ccfe8003a12?q=80&w=600&auto=format&fit=crop", // Decoración Floral
+    "/gallery/cumple 1.png",
+    "/gallery/cumple 2.png",
+    "/gallery/cumple 3.jpg",
+    "/gallery/cumple 4.jpg",
+    "/gallery/cumple 5.png",
+    "/gallery/cumple 6.png",
+    "/gallery/cumple 7.png",
+    "/gallery/cumple 8.jpg",// Decoración Floral
 ];
 
 export default function EventGallery() {
     return (
-        <section className="py-12 bg-white overflow-hidden">
-            <div className="text-center mb-8 px-4">
-                <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-2">
-                    Nuestra Experiencia
+        <section className="py-16 bg-[#002B36] overflow-hidden mt-20 border-t-4 border-primary">
+            <div className="text-center mb-10 px-4">
+                {/* Logo Brand */}
+                <div className="mb-6 flex justify-center">
+                    <span className="text-4xl font-bold text-white font-[family-name:var(--font-playfair)] tracking-wide">
+                        decorlesni
+                    </span>
+                </div>
+
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary/90 mb-3">
+                    NUESTRO TRABAJO
                 </p>
-                <h2 className="text-3xl font-bold text-gray-900 font-[family-name:var(--font-playfair)]">
-                    Momentos unicos que hemos creado
+                <h2 className="text-3xl md:text-4xl font-bold text-white font-[family-name:var(--font-playfair)]">
+                    Sonrisas, colores y celebraciones hechas realidad
                 </h2>
             </div>
 
             {/* Marquee Container */}
-            <div className="relative flex w-full overflow-hidden mask-fade-sides">
+            <div className="relative flex w-full overflow-hidden">
                 {/* Degradados laterales para suavizar bordes */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#002B36] to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#002B36] to-transparent z-10 pointer-events-none" />
 
                 <motion.div
                     className="flex gap-6 whitespace-nowrap"

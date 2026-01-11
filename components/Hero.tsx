@@ -18,11 +18,11 @@ export default function Hero() {
             {/* Hero Content */}
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
                 <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-white font-[family-name:var(--font-playfair)] sm:text-6xl lg:text-7xl drop-shadow-lg">
-                    Creamos Momentos <span className="text-primary">Inolvidables</span>
+                    Celebraciones que se quedan para siempre en el <span className="text-primary">corazón</span>
                 </h1>
 
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-200 font-[family-name:var(--font-inter)] sm:text-xl">
-                    Eventos Infantiles • Bodas • Quinceaños • Eventos Corporativos
+                    Diseñamos fiestas infantiles y eventos únicos, cuidando cada detalle para que solo te preocupes por disfrutar.
                 </p>
 
                 <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -30,7 +30,7 @@ export default function Hero() {
                         href="#cotizar"
                         className="group flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-yellow-600 hover:shadow-primary/30"
                     >
-                        Empezar a Cotizar
+                        Quiero cotizar mi evento
                         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </Link>
                 </div>
